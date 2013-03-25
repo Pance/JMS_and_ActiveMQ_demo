@@ -10,6 +10,6 @@ dependencies {
 }
 
 task (run, dependsOn: 'classes', type: JavaExec) {
-	main = 'Queue'
+	main = 'Demo'
 	classpath = sourceSets.main.runtimeClasspath
 }
