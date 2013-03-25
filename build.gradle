@@ -1,2 +1,15 @@
 apply plugin: 'java'
 
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.apache.activemq:activemq-core:5.7.0', 'org.apache.activemq:activemq-core:5.7.0'
+	//compile 'javax.jms:jms:1.1', 'javax.jms:jms:1.1'
+}
+
+task (run, dependsOn: 'classes', type: JavaExec) {
+	main = 'Queue'
+	classpath = sourceSets.main.runtimeClasspath
+}
